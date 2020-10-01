@@ -4,8 +4,8 @@ import {Form, Navbar, Button} from 'react-bootstrap'
 const SchoolResult = () => {
     return (
         <div className="home">
-            <Navbar bg="light" >
-    <Navbar.Brand className="second-nav">SHRI JI BABA PUBLIC SCHOOL</Navbar.Brand>
+            <Navbar bg="light"className="second-nav" >
+    <Navbar.Brand >SHRI JI BABA PUBLIC SCHOOL</Navbar.Brand>
     </Navbar>
     <div className='pageBodyResult'>
     <Form>

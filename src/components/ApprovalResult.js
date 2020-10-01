@@ -7,8 +7,8 @@ const ApprovalResult = ({tableData}) => {
     return (
       
         <div className="home">
-            <Navbar bg="light" >
-    <Navbar.Brand className="second-nav">SHRI JI BABA PUBLIC SCHOOL</Navbar.Brand>
+            <Navbar bg="light" className="second-nav">
+    <Navbar.Brand >SHRI JI BABA PUBLIC SCHOOL</Navbar.Brand>
     </Navbar>
     <div className='pageBodyResult'>
     
@@ -16,7 +16,7 @@ const ApprovalResult = ({tableData}) => {
   
   <Form.Row>
       <Form.Group className="row-first-form" controlId="exampleForm.SelectCustomSizeSm">
-    <Form.Label>Class</Form.Label>
+    <Form.Label>Exam Name</Form.Label>
     <Form.Control as="select" size="sm" >
       <option></option>
       <option>2</option>
@@ -26,7 +26,7 @@ const ApprovalResult = ({tableData}) => {
     </Form.Control>
   </Form.Group>
   <Form.Group className="row-second-form" controlId="exampleForm.SelectCustomSizeSm">
-    <Form.Label>Section</Form.Label>
+    <Form.Label>Subject Name</Form.Label>
     <Form.Control as="select" size="sm" >
       <option></option>
       <option>2</option>
