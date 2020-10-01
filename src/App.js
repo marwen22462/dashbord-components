@@ -1,24 +1,45 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
 
+import { BrowserRouter, Route, Switch } from "react-router-dom";
+import Home from "./components/Home";
+import SchoolResult from "./components/SchoolResult";
+import ApprovalResult from "./components/ApprovalResult";
+
+import "./App.css";
+
+const tableData = [
+  {
+      no:"1",
+      name:"Akhil",
+      approval:"Approval"
+  },
+  {
+      no:"2",
+      name:"Akhil",
+      approval:"Approval"
+  },
+  {
+      no:"3",
+      name:"Akhil",
+      approval:"Approval"
+  },
+  {
+      no:"4",
+      name:"Akhil",
+      approval:"Approval"
+  },
+];
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <BrowserRouter>
+        <Switch>
+          <Route exact path="/"> <Home /> </Route>
+          <Route path="/schoolResult"> <SchoolResult /></Route>
+          <Route path="/approvalResult"> <ApprovalResult tableData={tableData} /></Route>
+          
+        </Switch>
+      </BrowserRouter>
     </div>
   );
 }

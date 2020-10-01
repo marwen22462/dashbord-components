@@ -1,38 +1,144 @@
-.App {
-  text-align: center;
+/*the header */
+.home {
+  background-color: rgb(219, 219, 219);
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.navbar {
+  padding: 2em 0.7em !important;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  justify-content: space-between;
+}
+.pageBody {
+  background-color: white;
+  margin: 2em 2em;
+  padding: 2.3em 1.5em;
+}
+.userNav {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5em;
+}
+/* this is the above container section*/
+.logOutSection {
+  display: flex;
+  flex-direction: row;
+}
+.logOutSection h4 {
+  padding-top: 0.4em;
+  padding-right: 2em;
+}
+.svgLogOut {
+  font-size: 2em;
+  color: black;
+  border-radius: 50%;
+}
+.svgLogOut:hover {
+  font-size: 2em;
+  color: rgb(56, 182, 255);
+  border-radius: 50%;
+}
+.profile-picture {
+  width: 5rem;
+  height: 5rem;
+}
+.profile {
+  display: flex;
+  justify-content: space-between;
+}
+.profile h6 {
+  padding-top: 2em;
+}
+/* this is the container */
+.container {
+  display: flex;
+  justify-content: space-between;
+  margin: 0em 5em;
+}
+
+.container .rounded-circle {
+  width: 15rem;
+  height: 15rem;
+}
+.card-title {
+  padding-top: 1em;
+  padding-left: 1.5em;
+  font-size: 1.5em!important;
+  text-decoration: none;
+}
+.card:hover {
+  text-decoration: none;
+  /* color: rgb(123, 121, 255); */
+}
+.card{
+  border:none!important;
+}
+/* school result section*/
+.first-check{
+  display: flex;
+  justify-content: space-around;
+}
+.form-group{
+  display: flex;
+  padding-left: 3em;
+  padding-top: 2em;
+}
+.form-row{
+  padding-left: 3em;
+}
+.form-label{
+margin-right: 7em;
+}
+.row-first-form{
+  padding-left: 0.2em;
+}
+.row-first-form .form-label{
+  margin-right: 9.9em;
+}
+.row-second-form{
+  margin-left: 3em;
+}
+.row-second-form .form-control{
+  width: 20em;
+}
+.last-form .form-label{
+  margin-right: 5.4em;
+}
+.pageBodyResult{
+  background-color: #f3f7fb;
+  margin: 2em 2em;
+  padding: 2.3em 1.5em;
+}
+.form-control-sm{
+  width: 15em;
+}
+.form-label{
+  font-size: 1.35em;
+}
+.btn{
+  margin-top: 2em;
+  margin-left: 30em;
+  padding: 0.4em 2em;
+  background-color: #9583c7!important;
+  border-color: #9583c7!important;
+}
+.navbar{
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+}
+.second-nav{
+  font-size: 2em;
+}
+/* this is the approval result component css */
+.search-btn{
+  background-color: #9583c7!important;
+  border-color: #9583c7!important;
+  padding: 0.8em 2.5em;
+}
+.approval-case{
+  background-color: #66c4e1;
+display: flex;
+justify-content: center;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.S-table{
+  margin: 2em 8em;
 }
