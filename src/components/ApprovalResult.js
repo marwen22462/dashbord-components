@@ -1,15 +1,14 @@
 import React from 'react'
-import {Form, Navbar, Button, Table} from 'react-bootstrap'
+import {Form,  Button, Table} from 'react-bootstrap'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {faTrash, faEye} from '@fortawesome/free-solid-svg-icons'
+import Navigation from './Navigation'
 
 const ApprovalResult = ({tableData}) => {
     return (
       
         <div className="home">
-            <Navbar bg="light" className="second-nav">
-    <Navbar.Brand >SHRI JI BABA PUBLIC SCHOOL</Navbar.Brand>
-    </Navbar>
+            <Navigation />
     <div className='pageBodyResult'>
     
     <h4>Approve result</h4>

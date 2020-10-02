@@ -26,15 +26,15 @@
   border-radius: 50%;
 }
 .profile-picture {
-  width: 5rem;
-  height: 5rem;
+  width: 4rem;
+  height: 4rem;
 }
 .profile {
   display: flex;
   justify-content: flex-start;
 }
 .profile h6 {
-  padding-top: 2em;
+  padding-top: 1.6em;
   margin-left: 3em;
 }
 /*Drop down icon*/
@@ -85,13 +85,15 @@
 }
 .card-title {
   padding-top: 1em;
-  padding-left: 1.5em;
   font-size: 1.5em!important;
+  text-decoration: none;
+  color: black;
+}
+.card-title:hover {
   text-decoration: none;
 }
 .card:hover {
   text-decoration: none;
-  /* color: rgb(123, 121, 255); */
 }
 .card{
   border:none!important;
@@ -144,19 +146,18 @@ margin-right: 7em;
   background-color: #9583c7!important;
   border-color: #9583c7!important;
 }
-/* .navbar{
-  display: flex;
-  justify-content: center;
-} */
-.second-nav{
+
+.nav-title{
   display: flex!important;
   justify-content: center!important;
-  font-size: 90px!important;
+  font-size: 1.6em;
 }
-.second-nav span{
-  
-  font-size: 0.37em;
+.second-nav{
+  display: flex;
+  justify-content: center;
+  padding: 0.9em 0em;
 }
+
 /* this is the approval result component css */
 .search-btn{
   background-color: #9583c7!important;

@@ -1,12 +1,11 @@
 import React from 'react'
-import {Form, Navbar, Button} from 'react-bootstrap'
+import {Form,  Button} from 'react-bootstrap'
+import Navigation from './Navigation'
 
 const SchoolResult = () => {
     return (
         <div className="home">
-            <Navbar bg="light"className="second-nav" >
-    <Navbar.Brand >SHRI JI BABA PUBLIC SCHOOL</Navbar.Brand>
-    </Navbar>
+            <Navigation />
     <div className='pageBodyResult'>
     <Form>
     <Form.Group id="formGridCheckbox" className="first-check">
