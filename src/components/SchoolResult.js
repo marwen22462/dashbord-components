@@ -1,21 +1,20 @@
 import React from 'react'
-import {Form,  Button} from 'react-bootstrap'
-import Navigation from './Navigation'
+import {Form,  Button, Table} from 'react-bootstrap'
+import Header from './Header'
 
-const SchoolResult = () => {
+const SchoolResult = ({SchoolResultTable}) => {
+    const title = 'Result >  SchoolResults'
     return (
-        <div className="home">
-            <Navigation />
-    <div className='pageBodyResult'>
+        <div  className="home">
+            <Header />
+            <div className='pageBodyResult'>
     <Form>
-    <Form.Group id="formGridCheckbox" className="first-check">
-    <Form.Check type="checkbox" label="School test" />
-    <Form.Check type="checkbox" label="class test" />
-  </Form.Group>
+        <h6 className='title'>{title}</h6>
+    <h4>School results</h4>
   
 
   <Form.Group controlId="exampleForm.SelectCustomSizeSm">
-    <Form.Label>Exam name</Form.Label>
+    <Form.Label>Subject</Form.Label>
     <Form.Control as="select" size="sm" >
       <option></option>
       <option>2</option>
@@ -24,41 +23,33 @@ const SchoolResult = () => {
       <option>5</option>
     </Form.Control>
   </Form.Group>
-      <Form.Row>
-      <Form.Group className="row-first-form" controlId="exampleForm.SelectCustomSizeSm">
-    <Form.Label>Class</Form.Label>
-    <Form.Control as="select" size="sm" >
-      <option></option>
-      <option>2</option>
-      <option>3</option>
-      <option>4</option>
-      <option>5</option>
-    </Form.Control>
-  </Form.Group>
-  <Form.Group className="row-second-form" controlId="exampleForm.SelectCustomSizeSm">
-    <Form.Label>Section</Form.Label>
-    <Form.Control as="select" size="sm" >
-      <option></option>
-      <option>2</option>
-      <option>3</option>
-      <option>4</option>
-      <option>5</option>
-    </Form.Control>
-  </Form.Group>
-    </Form.Row>
-    <Form.Group className='last-form' controlId="exampleForm.SelectCustomSizeSm">
-    <Form.Label>Students name</Form.Label>
-    <Form.Control as="select" size="sm" >
-      <option></option>
-      <option>2</option>
-      <option>3</option>
-      <option>4</option>
-      <option>5</option>
-    </Form.Control>
-  </Form.Group>
-
-  <Button variant="primary" type="submit">
-    Save
+  <div className="S-table">
+  <Table striped bordered hover>
+  <thead>
+    <tr className="tableHead">
+      <th>S.No</th>
+      <th>Student's name</th>
+      <th>Written Out of 100</th>
+      <th>practical Out of 50</th>
+    </tr>
+  </thead>
+  <tbody>
+    {SchoolResultTable.map((row)=>(
+        <tr key={row.no}>
+            <td>{row.no} </td>
+            <td>{row.name}</td>
+            <td>{row.writtenOutOf100}</td>
+    <td>{row.writtenOutOf50}</td>
+        </tr>
+    )) }
+  </tbody>
+</Table>
+</div>
+  <Button className='btnSchoolResult' variant="primary" type="submit">
+    Edit
+  </Button>
+  <Button className='btnSchoolResult' variant="primary" type="submit">
+    Close
   </Button>
 </Form>
         </div>

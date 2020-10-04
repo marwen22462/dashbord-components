@@ -6,7 +6,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 
 
-const Navigation = ({type}) => {
+const Header = ({type}) => {
   console.log(type)
     return type==="home"? (
         <div>
@@ -19,7 +19,7 @@ const Navigation = ({type}) => {
       </div>
     <Navbar.Brand className="nav-title">SHRI JI BABA PUBLIC SCHOOL</Navbar.Brand>
 <div className="userNav">
-    <span className="logOutSection"><h4>Log out</h4>
+    <span className="logOutSection">
     <span className="svgLogOut dropdown">
       <span className="dropIcon">
     <FontAwesomeIcon icon={faCog} className="mr-3" />
@@ -47,4 +47,4 @@ const Navigation = ({type}) => {
     )
 }
 
-export default Navigation
+export default Header

@@ -2,13 +2,13 @@ import React from 'react'
 import {Form,  Button, Table} from 'react-bootstrap'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {faTrash, faEye} from '@fortawesome/free-solid-svg-icons'
-import Navigation from './Navigation'
+import Header from './Header'
 
 const ApprovalResult = ({tableData}) => {
     return (
       
         <div className="home">
-            <Navigation />
+            <Header />
     <div className='pageBodyResult'>
     
     <h4>Approve result</h4>

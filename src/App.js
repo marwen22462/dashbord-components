@@ -2,8 +2,9 @@ import React from "react";
 
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import Home from "./components/Home";
-import SchoolResult from "./components/SchoolResult";
+import Result from "./components/Result";
 import ApprovalResult from "./components/ApprovalResult";
+import SchoolResult from "./components/SchoolResult";
 
 import "./App.css";
 
@@ -29,14 +30,41 @@ const tableData = [
       approval:"Approval"
   },
 ];
+const SchoolResultTable= [
+  {
+    no:"1",
+    name:"Akhil",
+    writtenOutOf100:"30",
+    writtenOutOf50:"30"
+},
+  {
+    no:"2",
+    name:"Akhil",
+    writtenOutOf100:"30",
+    writtenOutOf50:"30"
+},
+  {
+    no:"3",
+    name:"Akhil",
+    writtenOutOf100:"30",
+    writtenOutOf50:"30"
+},
+  {
+    no:"4",
+    name:"Akhil",
+    writtenOutOf100:"30",
+    writtenOutOf50:"30"
+},
+]
 function App() {
   return (
     <div className="App">
       <BrowserRouter>
         <Switch>
           <Route exact path="/"> <Home /> </Route>
-          <Route path="/schoolResult"> <SchoolResult /></Route>
+          <Route path="/Result"> <Result /></Route>
           <Route path="/approvalResult"> <ApprovalResult tableData={tableData} /></Route>
+          <Route path="/schoolResult"> <SchoolResult SchoolResultTable={SchoolResultTable} /></Route>
           
         </Switch>
       </BrowserRouter>

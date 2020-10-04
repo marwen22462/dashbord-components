@@ -2,14 +2,14 @@ import React from "react";
 import { Container, Image, Card } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
-import Navigation from "./Navigation";
+import Header from "./Header";
 import photo1 from "../assets/photo1.jpg";
 import photo2 from "../assets/photo2.jpg";
 import photo3 from "../assets/photo3.png";
 const Home = () => {
   return (
     <div className="home">
-      <Navigation type={"home"} />
+      <Header type={"home"} />
 
       <div className="pageBody">
         <Container>
@@ -20,7 +20,7 @@ const Home = () => {
             </Card.Body>
           </Card>
           <Card style={{ width: "18rem" }}>
-            <Link to="/schoolResult">
+            <Link to="/Result">
               <Image variant="top" src={photo2} className="rounded-circle" />
             </Link>
             <Card.Body>
