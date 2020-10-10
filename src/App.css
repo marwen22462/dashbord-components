@@ -106,7 +106,7 @@
 .form-group{
   display: flex;
   padding-left: 3em;
-  padding-top: 2em;
+  padding-top: 0.8em;
 }
 .form-row{
   padding-left: 3em;
@@ -123,6 +123,9 @@ margin-right: 7em;
 .row-second-form{
   margin-left: 3em;
 }
+.row-second-form2{
+  margin-left: 5em;
+}
 .row-second-form .form-control{
   width: 20em;
 }
@@ -131,7 +134,23 @@ margin-right: 7em;
 }
 .pageBodyResult{
   background-color: #f3f7fb;
-  padding: 2em 2em 0em 2em;
+  padding: 0.5em 2em 0em 2em;
+}
+.result-upper-btns{
+  display: flex;
+  justify-content: space-around;  
+}
+.school-test-button{
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 16em;
+}
+.upper-button{
+  border: none;
+  background-color: #69c4da;
+  border-radius: 5px;
+  padding: 0.23em 1em;
+  color: white;
 }
 .form-control-sm{
   width: 15em;
@@ -140,11 +159,11 @@ margin-right: 7em;
   font-size: 1.35em;
 }
 .btn{
-  margin-top: 2em;
+  margin-top: 0em;
   margin-left: 30em;
   padding: 0.4em 2em;
-  background-color: #9583c7!important;
-  border-color: #9583c7!important;
+  background-color: #04044a!important;
+  border-color: #04044a!important;
 }
 
 .nav-title{
@@ -165,6 +184,10 @@ margin-right: 7em;
   padding: 0.3em 2.5em;
   margin-top: 0em;
 }
+.checkbox-result{
+  display: flex;
+  justify-content: space-around;
+}
 .approval-case{
   background-color: #66c4e1;
 display: flex;
@@ -177,9 +200,22 @@ justify-content: center;
 /*the modification of the SchoolResult component*/
 .title{
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  font-size: 0.8em;
-  margin-bottom: 2em;
+  margin-bottom: 0.7em;
 }
 .btnSchoolResult{
   margin-left:20em!important;
+}
+/*this the scc of page enter market */
+.market-row-first-form{
+  padding-top: 0.2em;
+  padding-left: 0.2em;
+  margin-bottom: 0em;
+}
+.market-row-first-form label{
+ margin-right: 0.8em;
+}
+.market-row-second-form{
+  padding-top: 0.2em;
+  margin-left: 1em;
+  margin-bottom: 0em;
 }

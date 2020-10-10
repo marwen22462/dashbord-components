@@ -5,6 +5,7 @@ import Home from "./components/Home";
 import Result from "./components/Result";
 import ApprovalResult from "./components/ApprovalResult";
 import SchoolResult from "./components/SchoolResult";
+import EnterMarks from "./components/EnterMarks";
 
 import "./App.css";
 
@@ -65,6 +66,7 @@ function App() {
           <Route path="/Result"> <Result /></Route>
           <Route path="/approvalResult"> <ApprovalResult tableData={tableData} /></Route>
           <Route path="/schoolResult"> <SchoolResult SchoolResultTable={SchoolResultTable} /></Route>
+          <Route path="/enterMarks"> <EnterMarks MarksTable={SchoolResultTable} /></Route>
           
         </Switch>
       </BrowserRouter>

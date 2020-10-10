@@ -7,7 +7,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 
 const Header = ({type}) => {
-  console.log(type)
     return type==="home"? (
         <div>
             <Navbar bg="light" >
