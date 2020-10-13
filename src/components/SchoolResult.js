@@ -45,10 +45,10 @@ const SchoolResult = ({SchoolResultTable}) => {
   </tbody>
 </Table>
 </div>
-  <Button className='btnSchoolResult' variant="primary" type="submit">
+  <Button className='btnSchoolResult button-inder-page' variant="primary" type="submit">
     Edit
   </Button>
-  <Button className='btnSchoolResult' variant="primary" type="submit">
+  <Button className='btnSchoolResult button-inder-page' variant="primary" type="submit">
     Close
   </Button>
 </Form>

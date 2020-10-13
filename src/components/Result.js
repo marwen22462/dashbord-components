@@ -1,30 +1,12 @@
-import React, { useState } from "react";
-import { Form, Button, Row } from "react-bootstrap";
+import React, { useState, createRef } from "react";
+import { Form, Button, Row, Popover, OverlayTrigger } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import Header from "./Header";
-import { useToast } from "@chakra-ui/core";
-const Example= ()=> {
-  const toast = useToast();
-  return (
-    <Button
-      onClick={() =>
-        toast({
-          title: "pop-up created.",
-          description: "this is the pop-up with auto hide after 9s",
-          status: "success",
-          duration: 9000,
-          isClosable: true,
-        })
-      }
-    >
-      Show Pop-UP
-    </Button>
-  );
-}
 
 const Result = () => {
   let [test, setTest] = useState("school test");
   const title = "Result";
+  const ref = createRef(); 
   console.log(test);
   return (
     <div className="home">
@@ -34,49 +16,191 @@ const Result = () => {
         <Form>
           <fieldset>
             <Form.Group as={Row} className="checkbox-result">
-                <Form.Check
-                  onClick={(e) => setTest(e.target.value)}
-                  type="radio"
-                  defaultChecked
-                  label="School test"
-                  name="formVerticalRadios"
-                  id="formVerticalRadios1"
-                  value="school test"
-                />
-                <Form.Check
-                  onClick={(e) => setTest(e.target.value)}
-                  type="radio"
-                  label="class test"
-                  name="formVerticalRadios"
-                  id="formVerticalRadios2"
-                  value="class test"
-                />
+              <Form.Check
+                onClick={(e) => setTest(e.target.value)}
+                type="radio"
+                defaultChecked
+                label="School test"
+                name="formVerticalRadios"
+                id="formVerticalRadios1"
+                value="school test"
+              />
+              <Form.Check
+                onClick={(e) => setTest(e.target.value)}
+                type="radio"
+                label="class test"
+                name="formVerticalRadios"
+                id="formVerticalRadios2"
+                value="class test"
+              />
             </Form.Group>
           </fieldset>
           <div>
             {test === "class test" ? (
-                <div className="result-upper-btns">
-                  <Link to="/enterMarks">
-                    <button className="upper-button" type="submit">
-                      Test details
-                    </button>
-                  </Link>
-                  <Link to="/enterMarks">
-                    <button className="upper-button" type="submit">
-                      Enter new marks
-                    </button>
-                  </Link>
-                </div>
-              ) : (
-                <div className="school-test-button">
+              <div  className="result-upper-btns">
                 <Link to="/enterMarks">
                   <button className="upper-button" type="submit">
-                    Enter new marks
+                    Test details
                   </button>
                 </Link>
-                </div>
-              )
-            }
+                <OverlayTrigger  
+                  trigger="click"
+                  key="left"
+                  placement="left"
+                  overlay={
+                    <Popover  id="popover-positioned-left">
+                      <Popover.Title as="h3">Enter new Test</Popover.Title>
+                      <Popover.Content>
+                        <Form.Group
+                          className="popover-form"
+                          // controlId="exampleForm.SelectCustomSizeSm"
+                        >
+                          <Form.Label>Exam</Form.Label>
+                          <Form.Control as="select" size="sm">
+                            <option></option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                          </Form.Control>
+                        </Form.Group>
+                        <Form.Group
+                          className="popover-form"
+                          // controlId="exampleForm.SelectCustomSizeSm"
+                        >
+                          <Form.Label>Date</Form.Label>
+                          <Form.Control  size="sm">
+                          </Form.Control>
+                        </Form.Group>
+                        <Form.Row className="popover-row">
+                          <Form.Group
+                            className="popover-form"
+                            // controlId="exampleForm.SelectCustomSizeSm"
+                          >
+                            <Form.Label>Class</Form.Label>
+                            <Form.Control as="select" size="sm">
+                              <option></option>
+                              <option>2</option>
+                              <option>3</option>
+                              <option>4</option>
+                              <option>5</option>
+                            </Form.Control>
+                          </Form.Group>
+                          <Form.Group
+                            className="popover-form"
+                            // controlId="exampleForm.SelectCustomSizeSm"
+                          >
+                            <Form.Label>Section</Form.Label>
+                            <Form.Control as="select" size="sm">
+                              <option></option>
+                              <option>2</option>
+                              <option>3</option>
+                              <option>4</option>
+                              <option>5</option>
+                            </Form.Control>
+                          </Form.Group>
+                        </Form.Row>
+                        <Form.Group className="popover-form">
+                          <Form.Label>Subject</Form.Label>
+                          <Form.Control as="select" size="sm">
+                            <option></option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                          </Form.Control>
+                        </Form.Group>
+                        <Button
+                          className="popover-button"
+                          variant="primary"
+                          type="submit"
+                        >
+                          Add Test
+                        </Button>
+                      </Popover.Content>
+                    </Popover>
+                  }
+                >
+                  <Button className="upper-button">Enter New Test</Button>
+                </OverlayTrigger>
+                  
+              </div>
+            ) : (
+              <div  className="school-test-button">
+                <OverlayTrigger  
+                  trigger="click"
+                  key="left"
+                  placement="left"
+                  overlay={
+                    <Popover  id="popover-positioned-left">
+                      <Popover.Title as="h3">Add New Makrs</Popover.Title>
+                      <Popover.Content>
+                        <Form.Group
+                          className="popover-form"
+                          // controlId="exampleForm.SelectCustomSizeSm"
+                        >
+                          <Form.Label>Exam</Form.Label>
+                          <Form.Control as="select" size="sm">
+                            <option></option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                          </Form.Control>
+                        </Form.Group>
+                        <Form.Row className="popover-row">
+                          <Form.Group
+                            className="popover-form"
+                            // controlId="exampleForm.SelectCustomSizeSm"
+                          >
+                            <Form.Label>Class</Form.Label>
+                            <Form.Control as="select" size="sm">
+                              <option></option>
+                              <option>2</option>
+                              <option>3</option>
+                              <option>4</option>
+                              <option>5</option>
+                            </Form.Control>
+                          </Form.Group>
+                          <Form.Group
+                            className="popover-form"
+                            // controlId="exampleForm.SelectCustomSizeSm"
+                          >
+                            <Form.Label>Section</Form.Label>
+                            <Form.Control as="select" size="sm">
+                              <option></option>
+                              <option>2</option>
+                              <option>3</option>
+                              <option>4</option>
+                              <option>5</option>
+                            </Form.Control>
+                          </Form.Group>
+                        </Form.Row>
+                        <Form.Group className="popover-form">
+                          <Form.Label>Subject</Form.Label>
+                          <Form.Control as="select" size="sm">
+                            <option></option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                          </Form.Control>
+                        </Form.Group>
+                        <Button
+                          className="popover-button"
+                          variant="primary"
+                          type="submit"
+                        >
+                          Save
+                        </Button>
+                      </Popover.Content>
+                    </Popover>
+                  }
+                >
+                  <Button  className="upper-button" variant="primary">Enter new marks</Button>
+                </OverlayTrigger>
+              </div>
+            )}
           </div>
           <Form.Group controlId="exampleForm.SelectCustomSizeSm">
             <Form.Label>Exam name</Form.Label>
@@ -91,7 +215,7 @@ const Result = () => {
           <Form.Row>
             <Form.Group
               className="row-first-form"
-              controlId="exampleForm.SelectCustomSizeSm"
+              // controlId="exampleForm.SelectCustomSizeSm"
             >
               <Form.Label>Class</Form.Label>
               <Form.Control as="select" size="sm">
@@ -104,7 +228,7 @@ const Result = () => {
             </Form.Group>
             <Form.Group
               className="row-second-form"
-              controlId="exampleForm.SelectCustomSizeSm"
+              // controlId="exampleForm.SelectCustomSizeSm"
             >
               <Form.Label>Section</Form.Label>
               <Form.Control as="select" size="sm">
@@ -118,7 +242,7 @@ const Result = () => {
           </Form.Row>
           <Form.Group
             className="last-form"
-            controlId="exampleForm.SelectCustomSizeSm"
+            // controlId="exampleForm.SelectCustomSizeSm"
           >
             <Form.Label>Subject</Form.Label>
             <Form.Control className="row-second-form2" as="select" size="sm">
@@ -131,7 +255,7 @@ const Result = () => {
           </Form.Group>
           <Form.Group
             className="last-form"
-            controlId="exampleForm.SelectCustomSizeSm"
+            // controlId="exampleForm.SelectCustomSizeSm"
           >
             <Form.Label>Students name</Form.Label>
             <Form.Control as="select" size="sm">
@@ -143,11 +267,10 @@ const Result = () => {
             </Form.Control>
           </Form.Group>
           <Link to="/schoolResult">
-            <Button variant="primary" type="submit">
+            <Button className="button-inder-page" variant="primary" type="submit">
               Save
             </Button>
           </Link>
-          {Example()}
         </Form>
       </div>
     </div>

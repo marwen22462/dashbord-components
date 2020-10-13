@@ -146,11 +146,11 @@ margin-right: 7em;
   margin-right: 16em;
 }
 .upper-button{
-  border: none;
-  background-color: #69c4da;
-  border-radius: 5px;
-  padding: 0.23em 1em;
-  color: white;
+  border: none!important;
+  background-color: #69c4da!important;
+  border-radius: 5px!important;
+  padding: 0.23em 1em!important;
+  color: white!important;
 }
 .form-control-sm{
   width: 15em;
@@ -158,7 +158,7 @@ margin-right: 7em;
 .form-label{
   font-size: 1.35em;
 }
-.btn{
+.button-inder-page{
   margin-top: 0em;
   margin-left: 30em;
   padding: 0.4em 2em;
@@ -218,4 +218,36 @@ justify-content: center;
   padding-top: 0.2em;
   margin-left: 1em;
   margin-bottom: 0em;
+}
+/* this is the popover css */
+.popover-form{
+  padding: 0px;
+  margin: 0px;
+}
+.popover-row{
+  padding: 0px;
+  margin: 0px;
+}
+.popover-form .form-label{
+  font-size: 0.8em;
+  padding: 0.2em ;
+  margin: 0.5em 0.7em 0.5em 0.2em;
+}
+.popover-form .form-control{
+  width: 5em;
+  height: 1.6em;
+}
+.popover-header{
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  font-size: 1em;
+  background-color: #66c4e1;
+}
+.bs-popover-left{
+  border-radius: 15px;
+}
+.popover-button{
+  font-size: 1em!important;
+  margin-left: 18vh;
+
 }
