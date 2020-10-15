@@ -2,12 +2,14 @@ import React, { useState, createRef } from "react";
 import { Form, Button, Row, Popover, OverlayTrigger } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import Header from "./Header";
+import ModalResult from "./ModalResult";
 
 const Result = () => {
   let [test, setTest] = useState("school test");
   const title = "Result";
-  const ref = createRef(); 
-  console.log(test);
+  const [show, setShow] = useState(false);
+
+  const handleShow = () => setShow(!show);
   return (
     <div className="home">
       <Header />
@@ -17,9 +19,10 @@ const Result = () => {
           <fieldset>
             <Form.Group as={Row} className="checkbox-result">
               <Form.Check
+                className="checkbox"
                 onClick={(e) => setTest(e.target.value)}
-                type="radio"
                 defaultChecked
+                type="radio"
                 label="School test"
                 name="formVerticalRadios"
                 id="formVerticalRadios1"
@@ -37,168 +40,31 @@ const Result = () => {
           </fieldset>
           <div>
             {test === "class test" ? (
-              <div  className="result-upper-btns">
+              <div className="class-test-btns">
                 <Link to="/enterMarks">
-                  <button className="upper-button" type="submit">
+                  <button
+                    className="upper-button"
+                    onClick={handleShow}
+                    type="submit"
+                  >
                     Test details
                   </button>
                 </Link>
-                <OverlayTrigger  
-                  trigger="click"
-                  key="left"
-                  placement="left"
-                  overlay={
-                    <Popover  id="popover-positioned-left">
-                      <Popover.Title as="h3">Enter new Test</Popover.Title>
-                      <Popover.Content>
-                        <Form.Group
-                          className="popover-form"
-                          // controlId="exampleForm.SelectCustomSizeSm"
-                        >
-                          <Form.Label>Exam</Form.Label>
-                          <Form.Control as="select" size="sm">
-                            <option></option>
-                            <option>2</option>
-                            <option>3</option>
-                            <option>4</option>
-                            <option>5</option>
-                          </Form.Control>
-                        </Form.Group>
-                        <Form.Group
-                          className="popover-form"
-                          // controlId="exampleForm.SelectCustomSizeSm"
-                        >
-                          <Form.Label>Date</Form.Label>
-                          <Form.Control  size="sm">
-                          </Form.Control>
-                        </Form.Group>
-                        <Form.Row className="popover-row">
-                          <Form.Group
-                            className="popover-form"
-                            // controlId="exampleForm.SelectCustomSizeSm"
-                          >
-                            <Form.Label>Class</Form.Label>
-                            <Form.Control as="select" size="sm">
-                              <option></option>
-                              <option>2</option>
-                              <option>3</option>
-                              <option>4</option>
-                              <option>5</option>
-                            </Form.Control>
-                          </Form.Group>
-                          <Form.Group
-                            className="popover-form"
-                            // controlId="exampleForm.SelectCustomSizeSm"
-                          >
-                            <Form.Label>Section</Form.Label>
-                            <Form.Control as="select" size="sm">
-                              <option></option>
-                              <option>2</option>
-                              <option>3</option>
-                              <option>4</option>
-                              <option>5</option>
-                            </Form.Control>
-                          </Form.Group>
-                        </Form.Row>
-                        <Form.Group className="popover-form">
-                          <Form.Label>Subject</Form.Label>
-                          <Form.Control as="select" size="sm">
-                            <option></option>
-                            <option>2</option>
-                            <option>3</option>
-                            <option>4</option>
-                            <option>5</option>
-                          </Form.Control>
-                        </Form.Group>
-                        <Button
-                          className="popover-button"
-                          variant="primary"
-                          type="submit"
-                        >
-                          Add Test
-                        </Button>
-                      </Popover.Content>
-                    </Popover>
-                  }
-                >
-                  <Button className="upper-button">Enter New Test</Button>
-                </OverlayTrigger>
-                  
+                <Button className="upper-button" onClick={handleShow}>
+                  Enter New Test
+                </Button>
+                <ModalResult show={show} handleShow={handleShow} type={test} />
               </div>
             ) : (
-              <div  className="school-test-button">
-                <OverlayTrigger  
-                  trigger="click"
-                  key="left"
-                  placement="left"
-                  overlay={
-                    <Popover  id="popover-positioned-left">
-                      <Popover.Title as="h3">Add New Makrs</Popover.Title>
-                      <Popover.Content>
-                        <Form.Group
-                          className="popover-form"
-                          // controlId="exampleForm.SelectCustomSizeSm"
-                        >
-                          <Form.Label>Exam</Form.Label>
-                          <Form.Control as="select" size="sm">
-                            <option></option>
-                            <option>2</option>
-                            <option>3</option>
-                            <option>4</option>
-                            <option>5</option>
-                          </Form.Control>
-                        </Form.Group>
-                        <Form.Row className="popover-row">
-                          <Form.Group
-                            className="popover-form"
-                            // controlId="exampleForm.SelectCustomSizeSm"
-                          >
-                            <Form.Label>Class</Form.Label>
-                            <Form.Control as="select" size="sm">
-                              <option></option>
-                              <option>2</option>
-                              <option>3</option>
-                              <option>4</option>
-                              <option>5</option>
-                            </Form.Control>
-                          </Form.Group>
-                          <Form.Group
-                            className="popover-form"
-                            // controlId="exampleForm.SelectCustomSizeSm"
-                          >
-                            <Form.Label>Section</Form.Label>
-                            <Form.Control as="select" size="sm">
-                              <option></option>
-                              <option>2</option>
-                              <option>3</option>
-                              <option>4</option>
-                              <option>5</option>
-                            </Form.Control>
-                          </Form.Group>
-                        </Form.Row>
-                        <Form.Group className="popover-form">
-                          <Form.Label>Subject</Form.Label>
-                          <Form.Control as="select" size="sm">
-                            <option></option>
-                            <option>2</option>
-                            <option>3</option>
-                            <option>4</option>
-                            <option>5</option>
-                          </Form.Control>
-                        </Form.Group>
-                        <Button
-                          className="popover-button"
-                          variant="primary"
-                          type="submit"
-                        >
-                          Save
-                        </Button>
-                      </Popover.Content>
-                    </Popover>
-                  }
+              <div className="school-test-button">
+                <Button
+                  className="upper-button"
+                  onClick={handleShow}
+                  variant="primary"
                 >
-                  <Button  className="upper-button" variant="primary">Enter new marks</Button>
-                </OverlayTrigger>
+                  Enter new marks
+                </Button>
+                <ModalResult show={show} handleShow={handleShow} type={test} />
               </div>
             )}
           </div>
@@ -266,11 +132,27 @@ const Result = () => {
               <option>5</option>
             </Form.Control>
           </Form.Group>
-          <Link to="/schoolResult">
-            <Button className="button-inder-page" variant="primary" type="submit">
-              Save
-            </Button>
-          </Link>
+          {test === "school test" ? (
+            <Link to="/schoolResult">
+              <Button
+                className="button-inder-page"
+                variant="primary"
+                type="submit"
+              >
+                Search
+              </Button>
+            </Link>
+          ) : (
+            <Link to="/classResult">
+              <Button
+                className="button-inder-page"
+                variant="primary"
+                type="submit"
+              >
+                Search
+              </Button>
+            </Link>
+          )}
         </Form>
       </div>
     </div>

@@ -6,6 +6,7 @@ import Result from "./components/Result";
 import ApprovalResult from "./components/ApprovalResult";
 import SchoolResult from "./components/SchoolResult";
 import EnterMarks from "./components/EnterMarks";
+import ClassResult from "./components/ClassResult";
 
 import "./App.css";
 
@@ -57,6 +58,28 @@ const SchoolResultTable= [
     writtenOutOf50:"30"
 },
 ]
+const ClassResultTable= [
+  {
+    no:"1",
+    name:"Akhil",
+    score:"5"
+},
+  {
+    no:"2",
+    name:"Akhil",
+    score:"10"
+},
+  {
+    no:"3",
+    name:"Akhil",
+    score:"20"
+},
+  {
+    no:"4",
+    name:"Akhil",
+    score:"17"
+},
+]
 function App() {
   return (
     <div className="App">
@@ -66,6 +89,7 @@ function App() {
           <Route path="/Result"> <Result /></Route>
           <Route path="/approvalResult"> <ApprovalResult tableData={tableData} /></Route>
           <Route path="/schoolResult"> <SchoolResult SchoolResultTable={SchoolResultTable} /></Route>
+          <Route path="/classResult"> <ClassResult ClassResultTable={ClassResultTable} /></Route>
           <Route path="/enterMarks"> <EnterMarks MarksTable={SchoolResultTable} /></Route>
           
         </Switch>

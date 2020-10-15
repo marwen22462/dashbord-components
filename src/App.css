@@ -136,14 +136,16 @@ margin-right: 7em;
   background-color: #f3f7fb;
   padding: 0.5em 2em 0em 2em;
 }
-.result-upper-btns{
+.class-test-btns{
+  margin-left: 20em;
+  margin-right: -9em;
   display: flex;
-  justify-content: space-around;  
+  justify-content: space-between;  
 }
 .school-test-button{
   display: flex;
   justify-content: flex-end;
-  margin-right: 16em;
+  margin-right: 18em;
 }
 .upper-button{
   border: none!important;
@@ -219,35 +221,47 @@ justify-content: center;
   margin-left: 1em;
   margin-bottom: 0em;
 }
-/* this is the popover css */
-.popover-form{
+/* this is the modal css */
+.modal-form{
   padding: 0px;
-  margin: 0px;
+  margin: 3px;
 }
-.popover-row{
+.modal-row{
   padding: 0px;
-  margin: 0px;
+  margin: 0px 2px;
 }
-.popover-form .form-label{
-  font-size: 0.8em;
-  padding: 0.2em ;
-  margin: 0.5em 0.7em 0.5em 0.2em;
-}
-.popover-form .form-control{
-  width: 5em;
+.modal-row .modal-form .form-control{
+  width: 6em;
   height: 1.6em;
 }
-.popover-header{
+.modal-form .form-label{
+  font-size: 0.9em;
+  margin: 0.2em 3em 0.5em 0.2em;
+}
+.modal-form .form-control{
+  width: 10em;
+  height: 1.6em;
+}
+.modal-header{
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
-  font-size: 1em;
-  background-color: #66c4e1;
+  background-color: #2a9cbe;
+  padding: 0.3em;
 }
-.bs-popover-left{
-  border-radius: 15px;
+.modal-title{
+  font-size: 1.2em;
+ margin-left: 35%;
 }
-.popover-button{
-  font-size: 1em!important;
-  margin-left: 18vh;
+.modal-content{
+  border-top-left-radius: 17px;
+  border-top-right-radius: 17px;
+}
 
+.modal-button{
+  margin-right: 40%;
+  background-color: #04044a!important;
+  color: white;
+  border: none;
+  padding: 0.3em 1.2em;
+  border-radius: 3em;
 }
