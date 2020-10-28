@@ -7,6 +7,7 @@ import ApprovalResult from "./components/ApprovalResult";
 import SchoolResult from "./components/SchoolResult";
 import EnterMarks from "./components/EnterMarks";
 import ClassResult from "./components/ClassResult";
+import ERessources from "./components/ERessources";
 
 import "./App.css";
 
@@ -91,6 +92,7 @@ function App() {
           <Route path="/schoolResult"> <SchoolResult SchoolResultTable={SchoolResultTable} /></Route>
           <Route path="/classResult"> <ClassResult ClassResultTable={ClassResultTable} /></Route>
           <Route path="/enterMarks"> <EnterMarks MarksTable={SchoolResultTable} /></Route>
+          <Route path="/ressources"> <ERessources /></Route>
           
         </Switch>
       </BrowserRouter>

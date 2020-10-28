@@ -36,10 +36,11 @@ const ApprovalResult = ({tableData}) => {
   </Form.Group>
     </Form.Row>
     
-
-  <Button className="search-btn" variant="primary" type="submit">
+<div className="search-section">
+  <Button className="search-btn"  type="submit">
     Search
-  </Button>
+  </Button></div>
+  
 <div className="S-table">
   <Table striped bordered hover>
   <thead>
@@ -64,9 +65,11 @@ const ApprovalResult = ({tableData}) => {
   </tbody>
 </Table>
 </div>
+<div className="search-section">
 <Button className="search-btn" variant="primary" type="submit">
     Submit
   </Button>
+  </div>
         </div>
         </div>
 
