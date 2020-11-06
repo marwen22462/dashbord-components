@@ -1,5 +1,5 @@
-import React, { useState, createRef } from "react";
-import { Form, Button, Row, Popover, OverlayTrigger } from "react-bootstrap";
+import React, { useState } from "react";
+import { Form, Button, Row } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import Header from "./Header";
 import ModalResult from "./ModalResult";
@@ -13,7 +13,8 @@ const Result = () => {
   return (
     <div className="home">
       <Header />
-      <div className="pageBodyResult">
+      <div className="containerPages">
+        <div className="pageBodyResult">
         <h3 className="title">{title}</h3>
         <Form>
           <fieldset>
@@ -154,6 +155,7 @@ const Result = () => {
             </Link>
           )}
         </Form>
+      </div>
       </div>
     </div>
   );
